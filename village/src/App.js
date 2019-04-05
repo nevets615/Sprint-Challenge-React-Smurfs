@@ -12,6 +12,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
+    
     axios
       .get("http://localhost:3333/smurfs")
       .then(res => {
@@ -26,20 +27,37 @@ class App extends Component {
         age: "",
         height: ""
       });
-  }
-
-
-  // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
-  // Notice what your map function is looping over and returning inside of Smurfs.
-  // You'll need to make sure you have the right properties on state and pass them down to props.
-  render() {
-    return (
-      <div className="App">
-        <SmurfForm />
-        <Smurfs smurfs={this.state.smurfs} />
-      </div>
-    );
-  }
+    }
+    
+    
+    // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
+    // Notice what your map function is looping over and returning inside of Smurfs.
+    // You'll need to make sure you have the right properties on state and pass them down to props.
+    render() {
+      const { smurfs } = this.state;
+      return (
+        <div className="App">
+          <nav>
+            <h1>Steven's Smurfs</h1>
+            <NavLink to="/">Smurfs</NavLink>
+            <NavLink to="/smurf-form">SmurfForm</NavLink>
+          </nav>
+          <Route
+            exact
+            path="/"
+            render={props => <Smurfs {...props} smurfs={smurfs} />}
+          />
+          <Route path="/smurf-form" component={SmurfForm} />
+          <div>
+          <Link to="/">Smurfs</Link>
+          <Link to="/smurf-form">SmurfForm</Link>
+          </div>
+        </div>
+          
+         
+      );
+      
 }
-
+}
 export default App;
+

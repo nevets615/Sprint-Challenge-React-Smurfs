@@ -1,3 +1,19 @@
 .App {
   text-align: center;
+  background-color: blue;
+}
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+form{
+  background-color: aquamarine
+}
+
+.App div{
+  display: flex;
+  
 }
