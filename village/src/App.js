@@ -39,8 +39,8 @@ class App extends Component {
         <div className="App">
           <nav>
             <h1>Steven's Smurfs</h1>
-            <NavLink to="/">Smurfs</NavLink>
-            <NavLink to="/smurf-form">SmurfForm</NavLink>
+            <NavLink to="/"activeClassName="Nav">Smurfs</NavLink>
+            <NavLink to="/smurf-form"activeClassName="Nav">SmurfForm</NavLink>
           </nav>
           <Route
             exact
@@ -48,7 +48,7 @@ class App extends Component {
             render={props => <Smurfs {...props} smurfs={smurfs} />}
           />
           <Route path="/smurf-form" component={SmurfForm} />
-          <div>
+          <div className="Link">
           <Link to="/">Smurfs</Link>
           <Link to="/smurf-form">SmurfForm</Link>
           </div>
