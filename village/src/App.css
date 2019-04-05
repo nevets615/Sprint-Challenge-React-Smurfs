@@ -1,3 +1,29 @@
 .App {
-  text-align: center;
+text-align: center;
+background-color: cornflowerblue;
+color: white;
+}
+h1{
+  color: cornflowerblue
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background-color: aqua;
+  padding: 0 200px;
+  
+}
+form{
+  background-color: aquamarine
+}
+.Link{
+  display: flex;
+  justify-content: space-evenly
+}
+.Nav{
+  background-color: cornflowerblue;
+  color: aliceblue;
+  padding: 15px;
 }
